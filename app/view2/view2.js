@@ -9,6 +9,16 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', [function() {
+.controller('View2Ctrl', ['$scope',function($scope) {
+	/* Example webservice request 
+	$http.get('http://rest-service.guides.spring.io/greeting').
+        then(function(response) {
+            $scope.greeting = response.data;
+        });
+    */
+    $scope.getOrder=function(){
+    	$scope.order={JsonResult:{nr:"16150",description:"This is my first sales order."}};
+    }
+
 
 }]);

@@ -1,1 +1,60 @@
-<p>This is the partial for view 1.</p>
+<div class="row">
+	<div class="col-sm-12">
+		<h1>Check order requests</h1>
+	</div>
+</div>
+<div class="row" ng-controller="DatepickerPopupCtrl">
+	<div class="col-sm-3">
+		<p class="input-group">
+			<input type="text" class="form-control" uib-datepicker-popup="dd/MM/yyyy" ng-model="startdate" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" placeholder="dd/MM/yyyy" />
+			<span class="input-group-btn">
+				<button type="button" class="btn btn-default" ng-click="open1()"><i class="fa fa-calendar"></i></button>
+			</span>
+		</p>
+	</div>
+	<div class="col-sm-3">
+		<p class="input-group">
+			<input type="text" class="form-control" uib-datepicker-popup="dd/MM/yyyy" ng-model="enddate" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" placeholder="dd/MM/yyyy" />
+			<span class="input-group-btn">
+				<button type="button" class="btn btn-default" ng-click="open2()"><i class="fa fa-calendar"></i></button>
+			</span>
+		</p>
+	</div>
+	<div class="col-sm-2">
+		<button type="button" class="btn btn-primary btn-sm" ng-Mouseup="getOrders()">Get orders</button>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		  <form>
+		    <div class="form-group">
+		      <div class="input-group">
+		        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+		        <input type="text" class="form-control" placeholder="Search the orders" ng-model="searchOrder">
+		      </div>      
+		    </div>
+		  </form>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+	<table class="table">
+	<thead>
+		<tr>
+			<th>Order nummer</th>
+			<th>Order description</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="order in orders.JsonResult | filter:searchOrder">
+			<td>{{order.nr}}</td>
+			<td>{{order.description}}</td>
+			<td><button type="button" class="btn btn-warning" ng-Mouseup="deleteOrder(order.nr)">Delete</button></td>
+		</tr>
+	</tbody>
+	</table>
+
+	</div>
+</div>

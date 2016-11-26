@@ -1,5 +1,36 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="row">
+	<div class="col-sm-12">
+		<h1>Get order details</h1>
+	</div>
+</div>
+<div class="row">
+	
+	
+	<div class="col-sm-3">
+		<input type="text" placeholder="Order number" />
+		<button type="button" class="btn btn-primary btn-sm" ng-Mouseup="getOrder()">Go</button>
+	</div>
+	<div class="col-sm-4"></div>
+</div>
+
+<div class="row">
+	
+	<div class="col-sm-2">
+		<p class="font-italic">Result</p>
+	</div>
+</div>
+
+
+
+
+<dl class="row">
+	
+	<dt class="col-sm-2">Order number:</dt>
+	<dd class="col-sm-2">{{order.JsonResult.nr}}</dd>
+</dl>
+<dl class="row">
+	
+	<dt class="col-sm-2">Description:</dt>
+	<dd class="col-sm-2">{{order.JsonResult.description}}</dl>
+</dl>
+</div>
