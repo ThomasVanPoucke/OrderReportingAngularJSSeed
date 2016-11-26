@@ -5,8 +5,8 @@ This project is meant as an example website on how to use AngularJS and Bootstra
 
 <h2>How to customise the website to your needs</h2>
 <ul>
-<li>I only gave an order a order number and a description. Add new order fields with the help of these examples. The search-box automatically also searches through any new order fields you add.</li>
-<li>Variables containing example orders are added to the website. Instead, call a webservice to get the orders you need.</li>
+<li>I only gave an order a number and a description. Add new order fields in a similar way. The search-box automatically also searches through any new order fields you add.</li>
+<li>Some orders are added to the website as an example. You'll need to provide/call a webservice to get the orders you need.</li>
 </ul>
 
 <h2>Requirements</h2>

@@ -2,7 +2,7 @@
   "name": "angular-seed",
   "description": "An example app to show orders by Thomas Van Poucke",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
+  "homepage": "https://github.com/ThomasVanPoucke/angular-order-reporting-seed",
   "license": "MIT",
   "private": true,
   "dependencies": {
